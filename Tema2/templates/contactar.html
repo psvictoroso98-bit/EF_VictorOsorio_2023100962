@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/ternero">Ternero/a</a></li>
+            <li><a href="/novillito">Novillito</a></li>
+            <li><a href="/novillo">Novillo</a></li>
+            <li><a href="/vaquillona">Vaquillona</a></li>
+            <li><a href="/vaca">Vaca</a></li>
+            <li><a href="/toro">Toro</a></li>
+            <li><a href="/contactar">Contactar</a></li>
+            <li><a href="/ayuda">Ayuda</a></li>
+            <li><a href="/logout">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <h1>Formulario de Contacto</h1>
+    <div class="form-container">
+        <form method="POST" action="/contactar">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="cel">Celular:</label>
+            <input type="text" id="cel" name="cel" required>
+
+            <label for="horario">Horario para llamar:</label>
+            <input type="text" id="horario" name="horario" required>
+
+            <label for="tipo_ganado">Tipo de ganado:</label>
+            <select id="tipo_ganado" name="tipo_ganado" required>
+                <option value="Ternero/a">Ternero/a</option>
+                <option value="Novillito">Novillito</option>
+                <option value="Novillo">Novillo</option>
+                <option value="Vaquillona">Vaquillona</option>
+                <option value="Vaca">Vaca</option>
+                <option value="Toro">Toro</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

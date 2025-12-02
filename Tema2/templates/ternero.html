@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ lote.tipo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/ternero">Ternero/a</a></li>
+            <li><a href="/novillito">Novillito</a></li>
+            <li><a href="/novillo">Novillo</a></li>
+            <li><a href="/vaquillona">Vaquillona</a></li>
+            <li><a href="/vaca">Vaca</a></li>
+            <li><a href="/toro">Toro</a></li>
+            <li><a href="/ayuda">Ayuda</a></li>
+            <li><a href="/logout">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <h1>{{ lote.tipo }}</h1>
+    <div class="product-container">
+        <div class="product">
+            <!-- Aquí luego agregás la imagen correspondiente -->
+            <img src="{{ url_for('static', filename='img/ternero.jpeg') }}" alt="{{ lote.tipo }}">
+            <h2>{{ lote.tipo }}</h2>
+            <p>Descripción: {{ lote.descripcion }}</p>
+            <p>Cantidad en lote: {{ lote.cantidad }}</p>
+            <p>Precio: {{ lote.precio }}</p>
+            <p class="producto disponible">Disponible</p>
+        </div>
+    </div>
+</body>
+</html>

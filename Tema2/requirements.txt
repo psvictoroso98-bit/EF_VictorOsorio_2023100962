@@ -1,0 +1,3 @@
+flask
+mysqk-connector
+#pip install -r .requirements

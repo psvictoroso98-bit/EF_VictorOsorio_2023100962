@@ -1,0 +1,10 @@
+créate database unida;
+
+CREATE TABLE solicitudes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    correo VARCHAR(100),
+    celular VARCHAR(20),
+    horario VARCHAR(50),
+    tipo_ganado VARCHAR(50)
+);

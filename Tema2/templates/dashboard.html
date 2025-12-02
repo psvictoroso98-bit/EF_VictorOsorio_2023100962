@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav>
+       <nav>
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/ternero">Ternero/a</a></li>
+            <li><a href="/novillito">Novillito</a></li>
+            <li><a href="/vaquillona">Vaquillona</a></li>
+            <li><a href="/vaca">Vaca</a></li>
+            <li><a href="/toro">Toro</a></li>
+            <li><a href="/contactar">Contactar</a></li>
+            <li><a href="/logout">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Libreria el VMOC</h1>
+    </header>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <a href="/novillito">
+                    <img src="{{ url_for('static', filename='img/novillito.jpg') }}" alt="novillito">
+                </a>
+                <a href="/novillo">
+                    <img src="{{ url_for('static', filename='img/novillo.jpeg') }}" alt="novillo">
+                </a>
+                   <a href="/ternero">
+                    <img src="{{ url_for('static', filename='img/ternero.jpeg') }}" alt="ternero">
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    
+        </div>
+    </section>
+
+
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.carousel-slide img');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].style.display = 'none';
+            }
+            index++;
+            if (index > totalSlides) { index = 1 }
+            slides[index - 1].style.display = 'block';
+            setTimeout(showSlides, 2000); // Cambia la imagen cada 2 segundos
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
